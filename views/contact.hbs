@@ -1,0 +1,43 @@
+
+        <H1 class="btn-success">
+            [Admin] Contact Management ! 
+        </H1>
+
+
+        <div class="container">
+        
+            <div class="row">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col"><b>#</b></th>
+                            <th scope="col"><b>FullName</b></th>
+                            <th scope="col"><b>Email</b></th>
+                            <th scope="col"><b>PhoneNumber</b></th>
+                            <th scope="col"><b>Messages</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each contact}}
+                            <tr>
+                                <th scope="row"> {{@key}}</th>
+                                <td>>{{this.FullName}}</td>
+                                <td>{{this.Email}}</td>
+                                <td>{{this.PhoneNumber}}</td>
+                                <td>{{this.Messages}}</td>
+                                
+                                <td>                                 
+                                    
+                                    <form  action="/contact/{{this._id}}?_method=DELETE" method="POST">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="submit" class="btn btn-danger" role="button" value="Delete">
+                                    </form>                                   
+
+
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+            </div>
+        </div>

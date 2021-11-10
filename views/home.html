@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Create responsive Homepage</title>
+    <link href="https://wallpaperaccess.com/full/3265869.png" rel="stylesheet">
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .top-nav{
+  height: 70px;
+  padding: 1rem 0;
+  background: rgb(4,206,238);
+  background: linear-gradient(90deg, rgba(4,206,238,1) 39%, rgba(215,44,241,1) 100%);
+}
+.top-nav__menu{
+  display: flex;
+  flex-flow: row nowrap; 
+  /*align-items: center;*/
+  float: left;
+  padding: 0; 
+  margin: 0;
+  list-style-type: none;
+  margin-right: 100px;
+  padding-left: 50px;
+  
+}   
+
+.top-nav__menu>li{
+  margin-right: 3rem;
+  padding-top: 0.5rem;
+}
+
+.top-nav__menu>li>a{
+  text-decoration: none;
+  font-family: 'Roboto';
+  list-style: none;
+  line-height: 20px;
+  font-size: 20px !important;
+  text-align: center;
+  color:white;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+ul.sub-menu{
+  width: 300px;
+  background:linear-gradient(90deg, rgba(4,206,238,1) 39%, rgba(215,44,241,1) 100%);
+  min-height: 120px;
+  display: none;
+  position: absolute;
+}
+ul.sub-menu li{
+  list-style: none;
+}
+ul.sub-menu li a{
+  color:white;
+  text-decoration: none;
+  display: block;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 20px ;
+  border-top: 1px solid #E6E6FA;
+  line-height: 60px;
+  text-indent: 5px;
+}
+ul.sub-menu li a:hover{
+  color: #000;
+}
+
+ul.top-nav__menu>li:hover ul.sub-menu{
+  display: block;
+}
+
+.hero{
+  background-image: url("https://th.bing.com/th/id/OIP.pdOQzGrPZAXTD6lgvPYLLwHaFk?w=248&h=186&c=7&r=0&o=5&dpr=1.25&pid=1.7");
+  padding-top : 10px;
+  padding-bottom : 48px;
+  height: 168px;
+}
+h1{
+  text-align: center;
+  color:rgb(51, 51, 51);  
+  font-family: 'Calibri';
+}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .wrapper {
+            width: 1170px;
+            margin: auto;
+        }
+        main {
+            background:  url(https://wallpaperaccess.com/full/3265869.png);
+            height: 100vh;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+        .nav-area {
+            float: right;
+            list-style: none;
+            margin-top: 30px;
+        }
+        .nav-area li {
+            display: inline-block;
+        }
+        .nav-area li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 20px;
+            font-family: poppins;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .nav-area li a:hover {
+            background: #fff;
+            color: #333;
+        }
+        .logo {
+            float: left;
+        }
+        .logo img {
+            width: 25%;
+            padding: 20px 0;
+        }
+        .welcome-text {
+            position: absolute;
+            width: 600px;
+            height: 300px;
+            margin: 20% 30%;
+            text-align: center;
+        }
+        .welcome-text h1 {
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 60px;
+        }
+        .welcome-text h1 span {
+            color: #00fecb;
+        }
+        .welcome-text a {
+            border: 1px solid #fff;
+            padding: 10px 25px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+            color: #fff;
+        }
+        .welcome-text a:hover {
+            background: #fff;
+            color: #333;
+        }
+        /*resposive*/
+
+        @media (max-width:600px) {
+            .wrapper {
+                width: 100%;
+            }
+            .logo {
+                float: none;
+                width: 50%;
+                text-align: center;
+                margin: auto;
+            }
+            img {
+                width: 100;
+            }
+            .nav-area {
+                float: none;
+                margin-top: 0;
+            }
+            .nav-area li a {
+                padding: 5px;
+                font-size: 11px;
+            }
+            .nav-area {
+                text-align: center;
+            }
+            .welcome-text {
+                width: 100%;
+                height: auto;
+                margin: 30% 0;
+            }
+            .welcome-text h1 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="container">  
+                
+                    
+                        <ul class="top-nav__menu" style="padding-left: 250px">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About us</a></li>
+                            <li><a href="/product">Products</a></li>
+                            <li><a href="/order">Order</a></li>
+                            <li><a href="/admin">Admin</a>
+                               <ul class="sub-menu">
+                                   <li><a href="/account">Acount Manage</a></li>
+                                  <li><a href="/user">User Manage</a></li>
+                                  <li><a href="/Contact">Contact Manage</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                            <li><a href="/signin">Sign in</a></li>
+                    
+                        </ul> 
+                   
+                    
+                    
+                
+            </div>
+        </nav>
+        <section class="hero">
+                <div class="container-fluid">
+                    <h1 class="hero__title"> <b>ATN SHOP</b></h1>
+                </div>
+        </section>
+            
+        </header>
+    <main>
+ 
+<div class="welcome-text">
+        <h1>
+We are <span>Creative</span></h1>
+<a href="/contact/create">Contact US</a>
+    </div>
+</main>
+
+
+</body>
+</html>
